@@ -48,6 +48,16 @@ html
     meta(name="msapplication-square310x310logo" content="/favicons/mstile-310x310.png")
 
     link(rel='stylesheet', href='/stylesheets/style.css')
+      
+    script.
+      var host = window.location.hostname;
+      if(host != "localhost"){
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-19349084-9');
+      }
   body
     block content
       
